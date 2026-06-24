@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 540" role="img" aria-label="Physiotherapist caring for a patient" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8f3ef"/>
+      <stop offset="1" stop-color="#bfeae3"/>
+    </linearGradient>
+    <linearGradient id="acoat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef7f5"/>
+    </linearGradient>
+    <linearGradient id="askin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9b8"/>
+      <stop offset="1" stop-color="#f7c39a"/>
+    </linearGradient>
+    <linearGradient id="aaccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb84d"/>
+      <stop offset="1" stop-color="#f5a623"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect x="8" y="8" width="464" height="524" rx="28" fill="url(#abg)"/>
+  <circle cx="380" cy="120" r="80" fill="#ffffff" opacity="0.45"/>
+  <g fill="#0f766e" opacity="0.12">
+    <path d="M60 70h9v9h9v9h-9v9h-9v-9h-9v-9h9z"/>
+    <path d="M410 410h7v7h7v7h-7v7h-7v-7h-7v-7h7z"/>
+  </g>
+
+  <!-- floor -->
+  <ellipse cx="240" cy="476" rx="180" ry="24" fill="#0c3b3a" opacity="0.10"/>
+
+  <!-- Therapist (physiotherapist) -->
+  <g>
+    <!-- head -->
+    <circle cx="300" cy="170" r="40" fill="url(#askin)"/>
+    <path d="M262 166 a40 40 0 0 1 76 -8 q-38 -16 -76 8z" fill="#2f2620"/>
+    <!-- white coat body -->
+    <path d="M250 360 q0 -120 50 -150 q50 30 50 150 z" fill="url(#acoat)"/>
+    <!-- stethoscope -->
+    <path d="M286 224 q-2 40 20 54 q22 -14 20 -54" fill="none" stroke="#0f766e" stroke-width="5"/>
+    <circle cx="326" cy="280" r="7" fill="#0f766e"/>
+    <!-- arm extending to help -->
+    <path d="M260 270 q-50 14 -86 60" stroke="url(#askin)" stroke-width="22" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Patient on table -->
+  <g>
+    <!-- treatment table -->
+    <rect x="60" y="350" width="250" height="26" rx="13" fill="url(#aaccent)"/>
+    <rect x="74" y="376" width="14" height="60" rx="6" fill="#e0922a"/>
+    <rect x="282" y="376" width="14" height="60" rx="6" fill="#e0922a"/>
+    <!-- patient body -->
+    <path d="M96 344 q70 -22 150 0" stroke="#19a89a" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <!-- patient leg raised (rehab) -->
+    <path d="M210 344 q40 -30 56 -56" stroke="#19a89a" stroke-width="24" stroke-linecap="round" fill="none"/>
+    <circle cx="270" cy="288" r="13" fill="url(#askin)"/>
+    <!-- patient head -->
+    <circle cx="104" cy="332" r="22" fill="url(#askin)"/>
+  </g>
+
+  <!-- caring heart -->
+  <g transform="translate(360 300)">
+    <path d="M0 8 C -10 -10 -34 4 0 30 C 34 4 10 -10 0 8 Z" fill="url(#aaccent)"/>
+  </g>
+</svg>

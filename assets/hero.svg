@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 560" role="img" aria-label="Physiotherapy and rehabilitation illustration" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19a89a"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb84d"/>
+      <stop offset="1" stop-color="#f5a623"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd9b8"/>
+      <stop offset="1" stop-color="#f7c39a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="10" y="10" width="500" height="540" rx="36" fill="url(#bg)"/>
+  <circle cx="420" cy="110" r="120" fill="#ffffff" opacity="0.08"/>
+  <circle cx="90" cy="470" r="90" fill="#ffffff" opacity="0.07"/>
+
+  <!-- Decorative plus signs -->
+  <g fill="#ffffff" opacity="0.5">
+    <path d="M70 90h10v10h10v10H80v10H70v-10H60v-10h10z"/>
+    <path d="M440 420h8v8h8v8h-8v8h-8v-8h-8v-8h8z"/>
+  </g>
+
+  <!-- Motion arcs -->
+  <g fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" opacity="0.9">
+    <path d="M360 360 a70 70 0 0 1 70 -70"/>
+    <path d="M375 380 a95 95 0 0 1 80 -85" opacity="0.55"/>
+  </g>
+
+  <!-- Floor -->
+  <ellipse cx="260" cy="468" rx="180" ry="26" fill="#0c3b3a" opacity="0.25"/>
+
+  <!-- Exercise mat -->
+  <rect x="120" y="450" width="300" height="24" rx="12" fill="url(#accent)"/>
+
+  <!-- Person doing a seated stretch -->
+  <g>
+    <!-- back leg -->
+    <path d="M250 452 q60 6 110 -2" stroke="#ffffff" stroke-width="30" stroke-linecap="round" fill="none"/>
+    <!-- foot -->
+    <circle cx="368" cy="448" r="16" fill="url(#skin)"/>
+    <!-- torso -->
+    <path d="M236 360 q-6 50 14 90" stroke="#ffffff" stroke-width="40" stroke-linecap="round" fill="none"/>
+    <!-- arm reaching -->
+    <path d="M250 372 q60 -6 108 64" stroke="url(#skin)" stroke-width="22" stroke-linecap="round" fill="none"/>
+    <!-- head -->
+    <circle cx="230" cy="330" r="34" fill="url(#skin)"/>
+    <!-- hair -->
+    <path d="M198 326 a34 34 0 0 1 64 -6 q-32 -14 -64 6z" fill="#3a2b22"/>
+  </g>
+
+  <!-- Therapist guiding hand -->
+  <g>
+    <circle cx="150" cy="300" r="26" fill="url(#skin)"/>
+    <path d="M150 326 q-4 50 30 86" stroke="#fff" stroke-width="34" stroke-linecap="round" fill="none" opacity="0.95"/>
+    <path d="M168 360 q40 10 60 16" stroke="url(#skin)" stroke-width="18" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Medical badge -->
+  <g transform="translate(372 150)">
+    <circle r="40" fill="#ffffff"/>
+    <path d="M-7 -22h14v15h15v14h-15v15h-14v-15h-15v-14h15z" fill="#0f766e"/>
+  </g>
+</svg>
