@@ -380,6 +380,35 @@ input, select, textarea, button { font: inherit; }
 .form__note.success { color: var(--teal-700); }
 .form__note.error { color: #d9534f; }
 
+/* New form extras */
+.req { color: #d9534f; }
+.form__group--hidden { display: none; }
+.form__hint { margin-top: 0.75rem; font-size: 0.82rem; color: var(--muted); text-align: center; }
+
+.form__group input[type="date"] { color: var(--text); }
+
+/* Consultation-type pills */
+.form__pills { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.pill { position: relative; flex: 1; min-width: 130px; cursor: pointer; }
+.pill input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.pill span {
+  display: flex; align-items: center; justify-content: center; gap: 0.4rem;
+  font-family: var(--font-head); font-weight: 500; font-size: 0.92rem;
+  padding: 0.75rem 0.9rem; border-radius: 12px;
+  border: 1.5px solid var(--border); background: var(--teal-50); color: var(--text);
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+.pill input:checked + span { border-color: var(--teal-500); background: var(--teal-100); color: var(--teal-700); font-weight: 600; }
+.pill input:focus-visible + span { outline: 2px solid var(--teal-500); outline-offset: 2px; }
+
+/* WhatsApp submit button */
+.btn--whatsapp { background: linear-gradient(135deg, #25d366, #1ebe5d); box-shadow: 0 10px 24px rgba(37, 211, 102, 0.32); }
+.btn--whatsapp:hover { box-shadow: 0 16px 30px rgba(37, 211, 102, 0.4); }
+.btn--whatsapp svg { flex-shrink: 0; }
+
+/* WhatsApp social chip */
+.social--wa:hover { background: #25d366; border-color: #25d366; color: #fff; }
+
 .contact__map { margin-top: 4rem; }
 .contact__map iframe { width: 100%; height: 380px; border: 0; display: block; filter: saturate(1.05); }
 

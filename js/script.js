@@ -93,31 +93,96 @@
   );
   counters.forEach((c) => countObserver.observe(c));
 
-  /* ---------- Contact form ---------- */
+  /* ---------- Contact form → WhatsApp ---------- */
+  // 👉 Set the WhatsApp number here (country code + number, digits only, no + or spaces).
+  //    Example for India: "919876543210"
+  const WHATSAPP_NUMBER = "910000000000";
+
   const form = document.getElementById("contact-form");
   const note = document.getElementById("form-note");
+  const serviceSelect = document.getElementById("service");
+  const otherGroup = document.getElementById("other-group");
+  const otherInput = document.getElementById("other-service");
+
+  // Show/hide the "Other" text field based on the service selection
+  if (serviceSelect && otherGroup) {
+    const toggleOther = () => {
+      const isOther = serviceSelect.value === "Other";
+      otherGroup.classList.toggle("form__group--hidden", !isOther);
+      if (otherInput) otherInput.required = isOther;
+      if (!isOther && otherInput) otherInput.value = "";
+    };
+    serviceSelect.addEventListener("change", toggleOther);
+    toggleOther();
+  }
 
   if (form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
       const name = form.name.value.trim();
       const phone = form.phone.value.trim();
+      const email = form.email.value.trim();
+      let service = form.service.value.trim();
+      const otherService = otherInput ? otherInput.value.trim() : "";
+      const mode = (form.querySelector('input[name="mode"]:checked') || {}).value || "";
+      const date = form.date.value.trim();
+      const time = form.time.value.trim();
+      const message = form.message.value.trim();
 
-      if (!name || !phone) {
-        note.textContent = "Please enter your name and phone number.";
+      // Validation
+      if (!name || !phone || !service) {
+        note.textContent = "Please fill in your name, phone, and the service needed.";
         note.className = "form__note error";
         return;
       }
+      if (service === "Other") {
+        if (!otherService) {
+          note.textContent = "Please specify the service you need.";
+          note.className = "form__note error";
+          return;
+        }
+        service = otherService;
+      }
 
-      // No backend wired up yet — this is where you'd send the data.
-      note.textContent = `Thank you, ${name}! Your request has been noted. I'll get back to you soon.`;
+      // Format the preferred date nicely (DD Mon YYYY)
+      let prettyDate = date;
+      if (date) {
+        const d = new Date(date + "T00:00:00");
+        if (!isNaN(d)) {
+          prettyDate = d.toLocaleDateString("en-IN", {
+            day: "2-digit", month: "short", year: "numeric",
+          });
+        }
+      }
+
+      // Build the WhatsApp message
+      const lines = [
+        "*New Appointment Request*",
+        "------------------------------",
+        `*Name:* ${name}`,
+        `*Phone:* ${phone}`,
+      ];
+      if (email) lines.push(`*Email:* ${email}`);
+      lines.push(`*Service:* ${service}`);
+      if (mode) lines.push(`*Consultation:* ${mode}`);
+      if (prettyDate) lines.push(`*Preferred Date:* ${prettyDate}`);
+      if (time) lines.push(`*Preferred Time:* ${time}`);
+      if (message) lines.push(`*Message:* ${message}`);
+
+      const text = encodeURIComponent(lines.join("\n"));
+      const waURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+      // Open WhatsApp (new tab / app)
+      window.open(waURL, "_blank");
+
+      note.textContent = `Thanks, ${name}! Opening WhatsApp so you can send your request…`;
       note.className = "form__note success";
-      form.reset();
 
       setTimeout(() => {
         note.textContent = "";
         note.className = "form__note";
-      }, 6000);
+      }, 7000);
     });
   }
 
