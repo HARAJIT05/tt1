@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harajit05.github.io/tt1/sitemap.xml
