@@ -76,6 +76,64 @@
     ]
   }
   </script>
+
+  <!-- ===== Structured Data: FAQ ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many physiotherapy sessions do I need for back pain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It varies with the cause and severity, but most patients with back pain see noticeable improvement within 6 to 8 sessions. Acute issues may need fewer, while chronic or post-surgery cases may need a longer, structured plan. After your first assessment you will get a clear, personalised estimate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide physiotherapy at home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Home physiotherapy is available across Gouranga Nagar and greater Kolkata for patients who find it difficult to travel, including elderly patients and those recovering from surgery or injury. The full session is carried out at your doorstep."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a doctor's referral to book a session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No referral is required. You can book a physiotherapy assessment directly. If your condition needs medical investigation, you will be advised and the physiotherapist will coordinate with your doctor where needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What conditions do you treat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Treatment is offered for back and neck pain, sciatica, sports injuries, knee and joint pain, frozen shoulder, arthritis, post-surgery rehabilitation, neurological conditions such as stroke and paralysis, and geriatric care for older adults."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is each physiotherapy session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A typical session lasts 30 to 45 minutes, depending on your condition and treatment plan. The first visit takes a little longer as it includes a full assessment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is physiotherapy painful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Physiotherapy should not be painful. Some techniques may cause mild, temporary discomfort, but treatment is always adjusted to your comfort level. The goal is to relieve pain, not add to it."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ============ HEADER / NAV ============ -->
@@ -93,6 +151,7 @@
           <li><a href="#services" class="nav__link">Services</a></li>
           <li><a href="#why" class="nav__link">Why Me</a></li>
           <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
         <button class="nav__close" id="nav-close" aria-label="Close menu">&times;</button>
@@ -334,6 +393,78 @@
               <div><strong>Amit Roy</strong><small>Kolkata</small></div>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Common Questions</span>
+          <h2 class="section__title">Frequently Asked <span>Questions</span></h2>
+          <p class="section__subtitle">
+            Answers to the questions patients in Kolkata ask most often about physiotherapy.
+          </p>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq__item" open>
+            <summary>How many physiotherapy sessions do I need for back pain?</summary>
+            <div class="faq__answer">
+              <p>It varies with the cause and severity, but most patients with back pain
+              see noticeable improvement within 6–8 sessions. Acute issues may need fewer,
+              while chronic or post-surgery cases may need a longer, structured plan. After
+              your first assessment I'll give you a clear, personalised estimate.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do you provide physiotherapy at home?</summary>
+            <div class="faq__answer">
+              <p>Yes. I offer home physiotherapy across Gouranga Nagar and greater Kolkata
+              for patients who find it difficult to travel — including elderly patients and
+              those recovering from surgery or injury. The full session is carried out at
+              your doorstep.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Do I need a doctor's referral to book a session?</summary>
+            <div class="faq__answer">
+              <p>No referral is required. You can book a physiotherapy assessment directly.
+              If your condition needs medical investigation, I'll advise you and coordinate
+              with your doctor where needed.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>What conditions do you treat?</summary>
+            <div class="faq__answer">
+              <p>I treat back &amp; neck pain, sciatica, sports injuries, knee and joint
+              pain, frozen shoulder, arthritis, post-surgery rehabilitation, neurological
+              conditions (such as stroke and paralysis), and provide geriatric care for
+              older adults.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>How long is each physiotherapy session?</summary>
+            <div class="faq__answer">
+              <p>A typical session lasts 30–45 minutes, depending on your condition and the
+              treatment plan. Your first visit takes a little longer as it includes a full
+              assessment.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary>Is physiotherapy painful?</summary>
+            <div class="faq__answer">
+              <p>Physiotherapy should not be painful. Some techniques may cause mild,
+              temporary discomfort, but treatment is always adjusted to your comfort level.
+              The goal is to relieve pain, not add to it.</p>
+            </div>
+          </details>
         </div>
       </div>
     </section>

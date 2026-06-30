@@ -348,6 +348,33 @@ input, select, textarea, button { font: inherit; }
 .testimonial__author small { color: var(--muted); }
 
 /* ============================================================
+   FAQ
+   ============================================================ */
+.faq__list { max-width: 820px; margin-inline: auto; display: grid; gap: 1rem; }
+.faq__item {
+  background: #fff; border: 1px solid var(--border);
+  border-radius: var(--radius-sm); box-shadow: var(--shadow-sm);
+  overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s;
+}
+.faq__item[open] { border-color: var(--teal-500); box-shadow: var(--shadow-md); }
+.faq__item summary {
+  list-style: none; cursor: pointer;
+  font-family: var(--font-head); font-weight: 600; font-size: 1.05rem;
+  color: var(--dark);
+  padding: 1.25rem 3rem 1.25rem 1.4rem; position: relative;
+}
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::after {
+  content: "+"; position: absolute; right: 1.3rem; top: 50%;
+  transform: translateY(-50%); font-size: 1.6rem; font-weight: 400;
+  color: var(--teal-600); transition: transform 0.25s ease;
+}
+.faq__item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+.faq__item summary:hover { color: var(--teal-700); }
+.faq__answer { padding: 0 1.4rem 1.3rem; }
+.faq__answer p { color: var(--muted); font-size: 0.98rem; }
+
+/* ============================================================
    CONTACT
    ============================================================ */
 .contact { background: var(--bg-alt); }
