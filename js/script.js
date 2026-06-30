@@ -94,9 +94,8 @@
   counters.forEach((c) => countObserver.observe(c));
 
   /* ---------- Contact form → WhatsApp ---------- */
-  // 👉 Set the WhatsApp number here (country code + number, digits only, no + or spaces).
-  //    Example for India: "919876543210"
-  const WHATSAPP_NUMBER = "910000000000";
+  // 👉 WhatsApp number (country code + number, digits only, no + or spaces).
+  const WHATSAPP_NUMBER = "918961976555";
 
   const form = document.getElementById("contact-form");
   const note = document.getElementById("form-note");
