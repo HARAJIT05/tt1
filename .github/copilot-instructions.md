@@ -11,7 +11,7 @@ This is a modern, fully responsive static portfolio website for Subhankar Majumd
 ## Architecture & Key Files
 
 ### Entry Point
-- **index.html** – Single-page site with modern semantic HTML structure: hero, trust bar, about, services, why-me, testimonials, FAQ, contact, footer
+- **index.html** – Single-page site with modern semantic HTML structure: hero, trust bar, about, services, why-me, testimonials, FAQ, **clinics**, contact, footer
 
 ### Styling
 - **css/styles.css** – **Complete rewrite** with:
@@ -157,6 +157,7 @@ Open DevTools (F12) and test these viewports:
 - **New Service Card:** Copy `.service-card` HTML block, add styling if needed
 - **New Testimonial:** Copy `.testimonial-card` block
 - **New FAQ Item:** Copy `<details class="faq-item">` block
+- **New Clinic:** Copy `.clinic-card` block and update info
 - **Mobile Menu Items:** Add `<a class="nav__link" href="#section">Label</a>` to `.nav`
 
 ### Updating Phone & Contact Info
@@ -215,3 +216,36 @@ If hamburger menu isn't working:
 - `--secondary: #ea580c` (Orange - accent)
 - `--gray-*`: Full grayscale from 50-700
 - WhatsApp: Hard-coded `#25D366` (official WhatsApp green)
+
+---
+
+## Clinics Section
+
+### Clinics Display
+- **Location:** Between FAQ and Contact sections
+- **Grid:** Responsive 2-column (desktop), 1-column (mobile)
+- **Cards:** Clinic name, location, hours, "View on Map" button
+- **Google Maps:** Direct links to clinic locations
+- **Styling:** 
+  - 3px teal border on top
+  - Hover effect (lift up -4px, enhanced shadow)
+  - Centered text with hospital emoji icon
+  - Gradient background in section
+
+### Updating Clinic Information
+1. **Edit Clinic Name:** Change `<h3>` text in `.clinic-card`
+2. **Edit Location:** Update `.clinic-card__location` text
+3. **Edit Hours:** Update `.clinic-card__hours` text
+4. **Update Maps Link:** Edit `href="https://maps.app.goo.gl/..."` to your Google Maps link
+5. **Add Third Clinic:** Copy entire `.clinic-card` div, update info, grid will auto-layout
+
+### Clinic Card Structure
+```html
+<div class="clinic-card">
+  <div class="clinic-card__icon">🏥</div>
+  <h3>Clinic Name</h3>
+  <p class="clinic-card__location">Location</p>
+  <p class="clinic-card__hours">Hours</p>
+  <a href="https://maps.app.goo.gl/..." target="_blank" class="btn btn--primary btn--sm">View on Map</a>
+</div>
+```
