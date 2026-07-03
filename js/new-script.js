@@ -11,7 +11,6 @@
   const nav = document.getElementById("nav-menu");
   const mobileOverlay = document.getElementById("mobile-overlay");
   const navLinks = nav.querySelectorAll("a");
-  const scrollTop = document.getElementById("scroll-top");
   const contactForm = document.getElementById("contact-form");
   const serviceSelect = document.getElementById("service");
   const otherGroup = document.getElementById("other-group");
@@ -79,21 +78,6 @@
     });
   };
 
-  // ===== SCROLL TO TOP BUTTON =====
-  const onScrollTop = () => {
-    if (window.scrollY > 300) {
-      scrollTop.classList.add("show");
-    } else {
-      scrollTop.classList.remove("show");
-    }
-  };
-
-  window.addEventListener("scroll", onScrollTop, { passive: true });
-
-  scrollTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
   // ===== SERVICE CONDITIONAL FIELD =====
   const toggleOtherService = () => {
     const isOther = serviceSelect.value === "Other";
@@ -116,12 +100,13 @@
       const phone = contactForm.phone.value.trim();
       const email = contactForm.email.value.trim();
       let service = contactForm.service.value.trim();
+      const timeslot = contactForm.timeslot.value.trim();
       const otherService = otherInput ? otherInput.value.trim() : "";
       const message = contactForm.message.value.trim();
 
       // Validation
-      if (!name || !phone || !service) {
-        showFormMessage("Please fill in your name, phone, and service.", "error");
+      if (!name || !phone || !service || !timeslot) {
+        showFormMessage("Please fill in your name, phone, service, and time slot.", "error");
         return;
       }
 
@@ -143,6 +128,7 @@
 
       if (email) lines.push(`*Email:* ${email}`);
       lines.push(`*Service:* ${service}`);
+      lines.push(`*Time Slot:* ${timeslot}`);
       if (message) lines.push(`*Message:* ${message}`);
 
       const text = encodeURIComponent(lines.join("\n"));
